@@ -1252,16 +1252,35 @@ input[type="submit"].inputboite:hover{
   right: 1.3rem;
 } */
 .header_navbar_admin_container{
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
 }
 
-.search_admin_navbar{
-  background: #43467f;
-  border-radius: 3px;
-  max-width: 700px;
-}
 
+.header-navigation_admin nav ul li a{
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-family: Poppins-Regular;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.header-navigation_admin nav ul{
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  /* background-color: #585858; */
+  gap: 2rem;
+  width: 250px;
+  padding-left: 2rem;
+  padding: 1rem;
+}
+.header-navigation_admin nav ul li{
+  font-size: 1.5rem;
+  padding: 1rem;
+}
 .header__profile__name--nav--pointer i {
   /* color: #f9fafb; */
 

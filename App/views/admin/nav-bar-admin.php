@@ -31,15 +31,6 @@
             </div>
             <!-- end shopname zone -->
 
-           
-            <div class="search_admin_navbar">
-                <i class="header__search--icon fas fa-search"></i>
-                <input
-                    class="header__search__input"
-                    type="text"
-                    placeholder="Search"
-                />
-            </div>
             <!-- navigation -->
             
             
@@ -55,7 +46,7 @@
         
     </header>
 
-    <div class="header-navigation">
+    <div class="header-navigation_admin">
                 <nav>
                     <ul>
                         <li><a href="">Dashboard</a> </li>
