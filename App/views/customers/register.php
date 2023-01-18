@@ -1,4 +1,6 @@
-
+<?php
+  require "../App/views/header-nav-bar.php";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -77,8 +79,5 @@
 		</div> <!-- site content -->
 	<script src="../ressources/js/form_customers_registration_validation_check.js"></script>
 
-	<?php
-            require "../App/views/footer.php"
-        ?>
 </body>
 </html>

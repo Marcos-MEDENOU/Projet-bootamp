@@ -32,8 +32,6 @@
                 <div class="products_home_views">
                     <?php
                    $products_selects=new ProductsControllers(); 
-                //    $products_selects2=new ProductsControllers(); 
-                //    $count=$products_selects2->detectIfUserConnect();
                    $products=$products_selects->ProductsPageControllers();
 
                         if(count($products) > 0){
@@ -51,12 +49,12 @@
                         <input type="hidden" name="p_name" value="<?= $products[$key]['product_name']; ?>">
                         <input type="hidden" name="p_price" value="<?=$products[$key]['product_price']; ?>">
                         <input type="hidden" name="p_image" value="<?= $products[$key]['product_image']; ?>">
-                        <label for="p_quantity">Quantité: </label>
-                        <input type="number" name="p_qty" class="p_quantity" value=1>
+                        <input type="hidden" name="p_qty" class="p_quantity" value=1>
           
                         <a href="view_page.php?pid=<?= $products[$key]['product_id']; ?>" class="view_more">Détails</a>
                         <input type="submit" value="Acheter" class="proceed-mney" name="add_to_cart">
                     </form>
+
                     <?php
                         }
                     }else{

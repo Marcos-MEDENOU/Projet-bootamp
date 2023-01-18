@@ -64,6 +64,7 @@
   </footer>
    
   <script src="../ressources/js/add_to_panner.js"></script>
+  <script src="../ressources/js/navbar.js"></script>
 
 </body>
 </html>

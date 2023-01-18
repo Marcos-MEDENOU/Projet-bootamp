@@ -17,6 +17,7 @@
 </head>
 <body>
 <header>
+    <div class="header_navbar_admin_container">
         <!-- header-top-navigation -->
         <div class="header-top-navigation">
          <!-- shopname-zone -->
@@ -31,9 +32,30 @@
             <!-- end shopname zone -->
 
            
-
+            <div class="search_admin_navbar">
+                <i class="header__search--icon fas fa-search"></i>
+                <input
+                    class="header__search__input"
+                    type="text"
+                    placeholder="Search"
+                />
+            </div>
             <!-- navigation -->
-            <div class="header-navigation">
+            
+            
+            <div class="present-admin">
+                <h1>Hello Admin</h1>
+            </div>
+        <!-- end navigation -->
+        </div>
+        <!-- end header-top-navigation -->
+    </div>
+
+    
+        
+    </header>
+
+    <div class="header-navigation">
                 <nav>
                     <ul>
                         <li><a href="">Dashboard</a> </li>
@@ -45,13 +67,5 @@
                     </ul>
                 </nav>
             </div>
-            
-            <div class="present-admin">
-                <h1>Hello Admin</h1>
-            </div>
-        <!-- end navigation -->
-        </div>
-        <!-- end header-top-navigation -->
-    </header>
 </body>
 </html>

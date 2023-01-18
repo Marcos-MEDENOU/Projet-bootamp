@@ -199,7 +199,7 @@
                 ":useremail" => $this->email,    
                 ":contactNumber" => $this->phoneNumber,
                 ":password" => password_hash($this->password,PASSWORD_DEFAULT),
-                ":user_picture"=>'jk.png'
+                ":user_picture"=>'avatar.jpg'
             ]);
         } catch (\PDOException $e) {
             echo $e->getMessage();

@@ -1,5 +1,5 @@
 <?php
-    
+  require "../App/views/header-nav-bar.php";
 ?>
 
 <!DOCTYPE html>
@@ -55,8 +55,5 @@
 </div>  <!-- main -->
 <script src="../ressources/js/form_customers_connexion_validation_check.js"></script>
 
-<?php
-            require "../App/views/footer.php"
-        ?>
 </body>
 </html>
