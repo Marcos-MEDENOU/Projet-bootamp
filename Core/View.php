@@ -8,6 +8,7 @@ namespace Core;
  */
 class View {
   /**
+   * 
    * Render a view file
    * 
    * @param string $view The view file

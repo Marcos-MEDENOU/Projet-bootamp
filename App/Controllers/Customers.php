@@ -46,22 +46,4 @@ class Customers extends \Core\Controller {
     // echo "<p>Query string parameters: <pre>" . 
   }
 
-
-  /**
-   * Before filter
-   * 
-   * @return void
-   */
-  protected function before() {
-    // echo "(before)";
-  }
-
-  /**
-   * After filter
-   * 
-   * @return void
-   */
-  protected function after() {
-    // echo "(after)";
-  }
 }

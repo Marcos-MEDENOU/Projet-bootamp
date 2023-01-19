@@ -36,7 +36,7 @@
                         if(count($products) > 0){
                             foreach ($products as $key => $value) {
                     ?>
-                     <form action="" class="products_home_forms" method="POST">
+                     <form action="" class="products_home_forms" method="POST" id="product_form">
                         <div class="prod_img">
                          <img src="/media/uploads/<?= $products[$key]["product_image"]; ?>" alt="" >
                             <div class="qty_price_home">
