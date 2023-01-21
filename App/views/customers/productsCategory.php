@@ -1,8 +1,3 @@
-<?php
- use  App\Controllers\ProductsControllers;
- require "../App/views/header-nav-bar.php";
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,19 +15,16 @@
                 <section class="products_filter">
                     <nav>
                         <ul>
-                        <li><a href="/Products">Tous les produits</a></li>
-
-                            <li><a href="/Products/category?category=Carte électronique">Cartes électronique</a></li>
-                            <li><a href="/Products/category?category=Composants électronique">Composants électronique</a></li>
-                            <li><a href="/Products/category?category=Kit électronique">Outils électronicien</a></li>
-                            <li><a href="/Products/category?category=Appareil de mesure">Appareil de mesure</a></li>
+                            <li><a href="/ProductsControllers/ProductsPageControllersAction">Tous les produits</a></li>
+                            <li><a href="/ProductsControllers/ProductsPageCategory?category=Carte électronique">Cartes électronique</a></li>
+                            <li><a href="/ProductsControllers/ProductsPageCategory?category=Composants électronique">Composants électronique</a></li>
+                            <li><a href="/ProductsControllers/ProductsPageCategory?category=Kit électronique">Outils électronicien</a></li>
+                            <li><a href="/ProductsControllers/ProductsPageCategory?category=Appareil de mesure">Appareil de mesure</a></li>
                         </ul>
                     </nav>
                 </section>
                 <div class="products_home_views">
                     <?php
-                   $products_selects=new ProductsControllers(); 
-                    $products=$products_selects->ProductsPageCategory();
                         if(count($products) > 0){
                             foreach ($products as $key => $value) {
                     ?>
@@ -63,7 +55,7 @@
                 </div>
             </section>
             <?php
-            require "../App/views/footer.php"
+            require "../App/views/components/footer.php"
         ?>
 </body>
 </html>

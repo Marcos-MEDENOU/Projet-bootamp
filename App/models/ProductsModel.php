@@ -48,7 +48,7 @@
             $select_home_products->execute();
 
             $stmt=$select_home_products->fetchAll();
-
+            
             return $stmt;
         }
 

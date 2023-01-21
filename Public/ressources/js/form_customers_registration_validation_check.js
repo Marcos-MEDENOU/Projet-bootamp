@@ -25,7 +25,7 @@ function serialize(form){
 register_form.addEventListener('submit', function(event){
     event.preventDefault();
     let xhttp= new XMLHttpRequest();
-    let form_url="/customerRegistration/validation";
+    let form_url="/RequestHandler/validationRegister";
     let parameters=serialize(register_form);
     xhttp.open("POST", form_url, true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -42,7 +42,7 @@ register_form.addEventListener('submit', function(event){
             if(xhttp.responseText=="Inscription réussi"){
                 iconeverify.setAttribute('src', "../ressources/svg/check.svg ")
                 setTimeout(() => {
-                    window.location.href="/customers/login";
+                    window.location.href="/HomeControllers/Login";
                 }, 2000);
             }
         }

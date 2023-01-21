@@ -27,7 +27,7 @@
                  */
                 $conn = new \PDO($dsn, $USERNAME, $PASSWORD);
                 return $conn;
-            } catch(\PDOException $e) {
+            }catch(\PDOException $e) {
                 die('Erreur connexion:'.$e->getMessage());
             }
         }

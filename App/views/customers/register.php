@@ -1,6 +1,4 @@
-<?php
-  require "../App/views/header-nav-bar.php";
-?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,7 +18,7 @@
 						 <!-- header-top-navigation -->
                          <div class="shop-name-header-form">
                         <?php
-                            require "../App/views/shop-name.php";
+                            require "../App/views/components/shop-name.php";
                         ?>
                         </div>
                           
@@ -67,7 +65,7 @@
 						</div>
 						<input id="submit" type="submit" name="submit" value="Register"  class="button">
 						<p style="color: black; margin-top: 6%;">Already Registered?
-						<a href="/customers/login" class="sign">Login Here</a>
+						<a href="/HomeControllers/login" class="sign">Login Here</a>
 						
 						</p>
 						</form>

@@ -8,9 +8,11 @@ use App\Models\UserModel;
 
 use App\Models\CartModel;
 
-class ProductsControllers {
+use App\Controllers\ComponentsControllers;
+
+class ProductsControllers extends \Core\Controller {
 /**
- * $usermodel
+ * PRODUCTS_CONTROLLERS class
  */
     public $productsmodel;
     public $category;
@@ -19,7 +21,7 @@ class ProductsControllers {
     public function __construct(){
         $this->productsmodel=new ProductsModel();
         $this->usersmodel=new UserModel();
-
+        $this->header_components= new ComponentsControllers();
     }
 
     public function homeProductsControllers(){
@@ -27,20 +29,46 @@ class ProductsControllers {
         return $result;
     }
 
-    public function ProductsPageControllers(){
-        $result= $this->productsmodel->insertProductsPage();
-        return $result;
+    public function ProductsPageControllersAction(){
+
+        $all_products= $this->productsmodel->insertProductsPage(); 
+
+        $header=$this->header_components->header_nav_bar_session();
+
+        $searchUser=$this->header_components-> headerCollectUserInfos();
+
+        $cid= $header;
+
+        $products=$all_products;
+
+
+        $userConnect= $searchUser;
+
+        require_once("../App/views/components/header-nav-bar.php");
+
+        require_once("../App/views/customers/productsPage.php");
     }
 
-    public function ProductsPageCategory(){
-        $result= $this->productsmodel->ProductsCategory();
-        return $result;
+    public function ProductsPageCategoryAction(){
+        
+        $productByCategory= $this->productsmodel->ProductsCategory();
+
+        $products=$productByCategory;
+
+        $header=$this->header_components->header_nav_bar_session();
+
+        $cid= $header;
+
+        $searchUser=$this->header_components-> headerCollectUserInfos();
+
+        $userConnect= $searchUser;
+
+        require_once("../App/views/components/header-nav-bar.php");
+
+        require_once("../App/views/customers/productsCategory.php");
     }
 
-    public function MatchUserNavBar(){
-        $result= $this->usersmodel->searchUserConnect();
-        return $result;
-    }
+    
 
     public function detectIfUserConnect(){
 

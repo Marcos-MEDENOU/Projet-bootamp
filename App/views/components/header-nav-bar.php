@@ -1,10 +1,4 @@
-<?php
- use App\controllers\ProductsControllers;
-session_start();
-if (isset($_SESSION["NavCustomerId"])) {
-    $cid =  $_SESSION["NavCustomerId"];
-}
- ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +30,7 @@ if (isset($_SESSION["NavCustomerId"])) {
                         <nav>
                             <ul>
                                 <li><a href="/">Accueil</a> </li>
-                                <li><a href="/Products">Produits</a></li>
+                                <li><a href="/ProductsControllers/ProductsPageControllersAction">Produits</a></li>
                                 <li><a href="">Services</a></li>
                                 <li><a href="/contacts">Contact</a></li>
                             </ul>
@@ -51,36 +45,29 @@ if (isset($_SESSION["NavCustomerId"])) {
                                          <?php
                                             if (!isset($_SESSION["NavCustomerId"])) {
                                                 ?>
-                                                 <li><a href="/customerRegistration/register">Inscription</a></li>
-                                    <li><a href="/Customers/login">Connexion</a></li>
+                                                 <li><a href="/HomeControllers/register">Inscription</a></li>
+                                    <li><a href="/HomeControllers/login">Connexion</a></li>
                                       
                                         <?php
-                                             }else if(isset($cid)){
-                                                    $products_selects=new ProductsControllers(); 
-                                                    $products=$products_selects->MatchUserNavBar($cid);
-                                                    if(count($products) > 0)
+                                             }else{   
+ 
+                                                if(count($userConnect) > 0)
                                             ?>
                                                 <div id="user_connect">
                                                     <div class="user_connect_container">
                                                         <div class="user_connect_image">
-                                                             <img width="40px" src="/media/uploads/<?= $products[0]["user_picture"]; ?>" alt="Photo de profil">                                                      
+                                                            <img width="40px" src="/media/uploads/<?= $userConnect[0]["user_picture"]; ?>" alt="Photo de profil">                                                      
                                                         </div>
                                                         <div class="user_connect_name">
-                                                            <span class="hi_user"><span class="name_user"> <?= $products[0]["username"]?></span></span>
+                                                            <span class="hi_user"><span class="name_user"> <?= $userConnect[0]["username"]?></span></span>
                                                         </div>  
                                                     </div>    
-                                                    <div>
+                                                <div>
                                                             
                                                                
                                              </div>
                                                             
-                                                        </div>
-                                                    
-                                                
-                                          
-                                                <!-- <li><a href="/customerRegistration/register">Inscription</a></li>
-                                    <li><a href="/Customers/login">Connexion</a></li> -->
-                                                
+                                             </div>                  
                                               <?php
                                             }
                                             ?>
@@ -97,16 +84,13 @@ if (isset($_SESSION["NavCustomerId"])) {
                                                 <a class="header__profile__name--nav--link" href="#">Message</a>
                                             </li>
                                             <li class="header__profile__name--nav--item">
-                                                <a class="header__profile__name--nav--link" href="/customerLogin/deconnect">Logout</a>
+                                                <a class="header__profile__name--nav--link" href="/HomeControllers/disconnect">Logout</a>
                                             </li>
                                         </ul>
-                                    <!-- </nav> -->
-                                    
-                                          
+                                                                            
                                 </div>
                         </div>
                         
-
                             <div class="paner_icon">
                                     
                                     <svg width="50px" opacity="0.7"xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

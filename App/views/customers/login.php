@@ -1,6 +1,3 @@
-<?php
-  require "../App/views/header-nav-bar.php";
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +19,7 @@
         <!-- <label for="chk" aria-hidden="true">Customer Login</label> -->
         <div class="shop-name-header-form">
                         <?php
-                            require "../App/views/shop-name.php";
+                            require "../App/views/components/shop-name.php";
                         ?>
                         </div>
         <h1>Customer Login</h1>
@@ -47,7 +44,7 @@
             <input id="submit" type="submit" name="login" value ="Login" class="button">
         <br>
         <p style="color: black; margin-top: 6%;">New User?
-        <a href="/customers/register" class="sign">Sign Up Here</a>
+        <a href="/HomeControllers/register" class="sign">Sign Up Here</a>
         
         </p>
         </form>

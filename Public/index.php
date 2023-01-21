@@ -33,8 +33,8 @@ $router = new Core\Router();
 
 // Add the routes
 $router->add('', ['controller' => 'HomeControllers', 'action' => 'index']);
-$router->add('products', ['controller' => 'Customers', 'action' => 'products']);
-$router->add('contacts', ['controller' => 'Customers', 'action' => 'contacts']);
+$router->add('products', ['controller' => 'ProductsControllers', 'action' => 'ProductsPageControllers']);
+$router->add('contacts', ['controller' => 'HomeControllers', 'action' => 'contacts']);
 // $router->add('sellers', ['controller' => 'Sellers', 'action' => 'login']);
 
 // $router->add('posts/new', ['controller' => 'Posts', 'action' => 'new']);

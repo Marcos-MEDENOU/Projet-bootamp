@@ -1,8 +1,4 @@
 
-<?php
-  require "../App/views/header-nav-bar.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,18 +27,8 @@
 
 
     <?php
-if(!isset($_COOKIE['user'])) {
-//   echo "Cookie named '" . $cookie_name . "' is not set!";
-    echo "not exist";
-} else {
-//   echo "Cookie '" . $cookie_name . "' is set!<br>";
-  echo "Value already exist ";
-  echo $_COOKIE['color'];
-}
-?>
-
-<?php
-            require "../App/views/footer.php"
+            require "../App/views/components/footer.php"
         ?>
+
 </body>
 </html>

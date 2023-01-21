@@ -12,7 +12,6 @@ function serialize(form){
             requestArray.push(element.name+ '=' + element.value);
         }
     });
-
     if(requestArray.length>0){
         return requestArray.join('&');
     }else{
@@ -24,7 +23,7 @@ function serialize(form){
 login_form.addEventListener('submit', function(event){
     event.preventDefault();
     let xhttp= new XMLHttpRequest();
-    let form_url="/customerLogin/validation";
+    let form_url="/RequestHandler/validationLogin";
     let parameters=serialize(login_form);
     console.log(parameters);
     xhttp.open("POST", form_url, true);

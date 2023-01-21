@@ -4,12 +4,10 @@
 
     use App\Models\Connexions;
 
-    class UserModel extends Connexions{
-      
-            /**
-     * $conn
-     */
-
+    class UserModel extends Connexions{ 
+    /**
+    * $conn
+    */
     public $conn;
     public $username;
     public $email;
@@ -156,7 +154,7 @@
 
     public function searchUserConnect(){
       
-
+      
       $conn = $this->connect();
 
       $sql = "SELECT * FROM `electrobest_project`.customer WHERE cid = ?;";
@@ -168,7 +166,6 @@
         $result = $stmt->fetchAll();
         return $result;
       } catch (\PDOException $e) {
-        //throw $th;
         echo $e->getMessage();
       }
 
