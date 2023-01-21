@@ -32,7 +32,7 @@ $router = new Core\Router();
 // echo get_class($router);
 
 // Add the routes
-$router->add('', ['controller' => 'Home', 'action' => 'index']);
+$router->add('', ['controller' => 'HomeControllers', 'action' => 'index']);
 $router->add('products', ['controller' => 'Customers', 'action' => 'products']);
 $router->add('contacts', ['controller' => 'Customers', 'action' => 'contacts']);
 // $router->add('sellers', ['controller' => 'Sellers', 'action' => 'login']);
